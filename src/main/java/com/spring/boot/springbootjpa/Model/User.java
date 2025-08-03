@@ -43,7 +43,7 @@ public class User {
     @Column(columnDefinition = "double not null")
     private Double balance;
 
-    // TODO Extra variables:
+    // TODO Extra user variables:
     @Column(columnDefinition = "varchar(30) not null")
     private String orderHistory;
 

@@ -123,11 +123,11 @@ public class MerchantStockService {
             // TODO Extra steps:
             // count how many times a product was purchased
             p.setTimesPurchased(p.getTimesPurchased() + 1);
-            // TODO update the DB
 
+            productService.save(p);
             // store user purchase history in the format ("productID_Date,") i.e. ("100_2025-07-28,")
             u.setOrderHistory(u.getOrderHistory().concat(productID+"_"+ LocalDate.now()+","));
-            // TODO update DB
+            userService.save(u);
 
             return removeStockFromProduct(productID, merchantID, 1)
                     && userService.pay(userID, p.getPrice());

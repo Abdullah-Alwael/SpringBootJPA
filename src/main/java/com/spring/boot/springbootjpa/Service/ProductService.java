@@ -222,8 +222,16 @@ public class ProductService {
             }
         }
 
+        User user = userService.getUser(userID);
+        user.setFavoriteCategory(favoriteCategory);
+        userService.save(user);
         return favoriteCategory;
 
+    }
+
+    // for extra variables update
+    public void save(Product product){
+        productRepository.save(product);
     }
 
 }
