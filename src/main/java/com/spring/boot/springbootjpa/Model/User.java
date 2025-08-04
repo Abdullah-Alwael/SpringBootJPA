@@ -44,9 +44,9 @@ public class User {
     private Double balance;
 
     // TODO Extra user variables:
-    @Column(columnDefinition = "varchar(30)")
+    @Column(columnDefinition = "varchar(30) default ''")
     private String orderHistory;
 
-    @Column(columnDefinition = "varchar(30)")
+    @Column(columnDefinition = "varchar(30) default ''")
     private String favoriteCategory;
 }

@@ -35,9 +35,9 @@ public class Product {
     private Integer categoryID; // from the category class
 
     // TODO Extra product variables:
-    @Column(columnDefinition = "int")
+    @Column(columnDefinition = "int not null default 0")
     private Integer timesPurchased; // how many times the product was purchased
 
-    @Column(columnDefinition = "double")
+    @Column(columnDefinition = "double not null default 1")
     private Double score; // used by admin for advertisements
 }

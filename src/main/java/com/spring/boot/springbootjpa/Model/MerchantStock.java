@@ -29,7 +29,7 @@ public class MerchantStock {
 
     @NotNull(message = "stock must not be empty")
     @Min(value = 11, message = "stock must not be less than 11 initially")
-    @Column(columnDefinition = "int not null")
+    @Column(columnDefinition = "int not null default 11")
     private Integer stock;
 
 }
