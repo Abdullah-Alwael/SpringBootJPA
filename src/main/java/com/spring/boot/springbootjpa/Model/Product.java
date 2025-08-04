@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class Product {
 
     @Id
-    @NotNull(message = "id must not be empty")
+//    @NotNull(message = "id must not be empty")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
